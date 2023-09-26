@@ -1,14 +1,9 @@
 import React from "react";
 import Stock from "../../../Assets/In Stock.png";
-import data from "../../../Assets/lap1.jpg";
-import Lap2 from "../../../Assets/lap2.jpg";
-import Lap3 from "../../../Assets/lap3.jpg";
-import Lap4 from "../../../Assets/lap4.jpg";
-import Lap5 from "../../../Assets/lap5.jpg";
 import star from "../../../Assets/Star 9.png";
 import fadeStar from "../../../Assets/Star 1.png";
 
-function Card({ data, key }) {
+function Card({ data }) {
     return (
         <div>
             <div

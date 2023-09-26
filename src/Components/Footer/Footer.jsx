@@ -4,6 +4,8 @@ import amex from "../../Assets/amex.svg";
 import maestro from "../../Assets/maestro.svg";
 import paypal from "../../Assets/paypal.svg";
 import visa from "../../Assets/visa.svg";
+import Accordion from "./Accordion";
+import { dataAccord } from "./Data";
 
 function Footer() {
     return (
@@ -29,71 +31,85 @@ function Footer() {
                         </button>
                     </div>
                 </div>
-                <div className="text-white flex justify-between md:flex-row flex-col gap-4  pb-5 border-b border-solid border-gray-600">
-                    <div>
-                        <h2 className="text-gray-500 font-[900] mb-4">Information</h2>
-                        <ul className="text-xs">
-                            <li>About Us</li>
-                            <li>About Zip</li>
-                            <li>Privacy Policy</li>
-                            <li>search</li>
-                            <li>Terms</li>
-                            <li>Orders and Returns</li>
-                            <li>Contact Us</li>
-                            <li>Advanced Search</li>
-                            <li>Newsletter Subscription</li>
-                        </ul>
+                <div className="text-white pb-5 border-b border-solid border-gray-600 hidden md:block">
+                    <div className="grid grid-cols-3 md:grid-cols-5">
+                        <div>
+                            <h2 className="text-gray-500 font-[900] mb-4">Information</h2>
+                            <ul className="leading-normal text-xs">
+                                <li>About Us</li>
+                                <li>About Zip</li>
+                                <li>Privacy Policy</li>
+                                <li>search</li>
+                                <li>Terms</li>
+                                <li>Orders and Returns</li>
+                                <li>Contact Us</li>
+                                <li>Advanced Search</li>
+                                <li>Newsletter Subscription</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 className="text-gray-500 font-[900] mb-4">PC Parts</h2>
+                            <ul className="leading-normal text-xs">
+                                <li>CPUS</li>
+                                <li>Add On Cards</li>
+                                <li>Hard Drives(Internal)</li>
+                                <li>Graphic Cards</li>
+                                <li>Keyboards / Mice</li>
+                                <li>Cases / Power Supplies / Cooling</li>
+                                <li>RAM (Memory)</li>
+                                <li>Software</li>
+                                <li>Speakers / Headsets</li>
+                                <li>Motherboards</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 className="text-gray-500 font-[900] mb-4">Desktop PCs</h2>
+                            <ul className="leading-normal text-xs">
+                                <li>Custom PCs</li>
+                                <li>Servers</li>
+                                <li>MSI All-In-One PCs</li>
+                                <li>HP/Compaq PCs</li>
+                                <li>ASUS PCs</li>
+                                <li>Tecs PCs</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 className="text-gray-500 font-[900] mb-4">Laptops</h2>
+                            <ul className="leading-normal text-xs">
+                                <li>Everyday Use Notebooks</li>
+                                <li>MSI Workstation Series</li>
+                                <li>MSI Prestige Series</li>
+                                <li>Tablets and Pads</li>
+                                <li>Notebooks</li>
+                                <li>Infinity Gaming Notebooks</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 className="text-gray-500 font-[900] mb-4">Address</h2>
+                            <ul className="leading-normal text-xs">
+                                <li>Address: 1234 Street Address City Address, 1234</li>
+                                <li>Phones: (00) 1234 5678</li>
+                                <li>We are open: Monday-Thursday: 9.00 AM - 5.30 PM</li>
+                                <li>Friday: 9.00AM - 6.00 PM</li>
+                                <li>Saturday: 11.00AM -5.00 PM</li>
+                                <li>Email: shop@email.com</li>
+                                <li>Contact Us</li>
+                                <li>Advanced Search</li>
+                                <li>Newsletter Subscription</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <h2 className="text-gray-500 font-[900] mb-4">PC Parts</h2>
-                        <ul className="text-xs">
-                            <li>CPUS</li>
-                            <li>Add On Cards</li>
-                            <li>Hard Drives(Internal)</li>
-                            <li>Graphic Cards</li>
-                            <li>Keyboards / Mice</li>
-                            <li>Cases / Power Supplies / Cooling</li>
-                            <li>RAM (Memory)</li>
-                            <li>Software</li>
-                            <li>Speakers / Headsets</li>
-                            <li>Motherboards</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 className="text-gray-500 font-[900] mb-4">Desktop PCs</h2>
-                        <ul className="text-xs">
-                            <li>Custom PCs</li>
-                            <li>Servers</li>
-                            <li>MSI All-In-One PCs</li>
-                            <li>HP/Compaq PCs</li>
-                            <li>ASUS PCs</li>
-                            <li>Tecs PCs</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 className="text-gray-500 font-[900] mb-4">Laptops</h2>
-                        <ul className="text-xs">
-                            <li>Everyday Use Notebooks</li>
-                            <li>MSI Workstation Series</li>
-                            <li>MSI Prestige Series</li>
-                            <li>Tablets and Pads</li>
-                            <li>Notebooks</li>
-                            <li>Infinity Gaming Notebooks</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 className="text-gray-500 font-[900] mb-4">Address</h2>
-                        <ul className="text-xs">
-                            <li>Address: 1234 Street Address City Address, 1234</li>
-                            <li>Phones: (00) 1234 5678</li>
-                            <li>We are open: Monday-Thursday: 9.00 AM - 5.30 PM</li>
-                            <li>Friday: 9.00AM - 6.00 PM</li>
-                            <li>Saturday: 11.00AM -5.00 PM</li>
-                            <li>Email: shop@email.com</li>
-                            <li>Contact Us</li>
-                            <li>Advanced Search</li>
-                            <li>Newsletter Subscription</li>
-                        </ul>
+                </div>
+                <div className="md:hidden block">
+                    <div className="w-full mx-auto flex flex-col gap-3">
+                        {dataAccord.map((item, key) => {
+                            const { heading, list } = item;
+                            return (
+                                <div className="p-5 rounded-md">
+                                    <Accordion heading={heading} list={list} />
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
                 <div className="flex md:justify-between justify-center md:flex-row flex-col items-center gap-3  text-white py-4">
@@ -102,7 +118,7 @@ function Footer() {
                         <AiFillInstagram
                             size={25}
                             color="gray
-                        "
+                            "
                         />
                     </div>
                     <div className="flex justify-between gap-2 align-middle">

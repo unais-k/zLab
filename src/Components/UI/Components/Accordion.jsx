@@ -22,12 +22,12 @@ export function Accordion(props) {
                     <MdKeyboardArrowDown size={10} />
                 </div>
             </div>
-            <div className="overflow-hidden mt-3 duration-300 max-h-0 group-[.is-active]:max-h-full">
+            <div className="overflow-hidden mt-3 duration-500 max-h-0 group-[.is-active]:max-h-full">
                 {data?.cat?.map((item, key) => {
                     return (
                         <div className="flex justify-between flex-row">
-                            <div>{item.type}</div>
-                            <div>{item.qyt}</div>
+                            <div className="mb-1">{item.type}</div>
+                            <div className="mb-1">{item.qyt}</div>
                         </div>
                     );
                 })}

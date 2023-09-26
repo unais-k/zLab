@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import banner from "../../Assets/tufGameBanner.jpg";
 import { IoAppsSharp } from "react-icons/io5";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { Accordion, ColorAcc, FilterAcc } from "./Components/Accordion";
 import upwind from "../../Assets/upwind.png";
 import XPhoto from "../../Assets/Group 108.png";
-import { FilterPage, FilterData } from "./Components/DropDown";
+import { FilterPage, FilterData, FilterSideBar } from "./Components/DropDown";
 import Card from "./Components/Card";
 import Pagination from "./Components/Pagination";
 import chairPhoto from "../../Assets/image 49.jpg";
@@ -13,7 +13,7 @@ import { photoOfLaptop, photoOfBrand } from "./Components/Constant";
 import IconCard from "./Components/IconCard";
 
 function Home() {
-    const [list, setList] = useState([
+    const list = [
         {
             title: "Category",
             cat: [
@@ -68,7 +68,7 @@ function Home() {
                 },
             ],
         },
-    ]);
+    ];
 
     return (
         <section className="pt-0">
@@ -76,7 +76,7 @@ function Home() {
                 <div className="hidden md:block">
                     <img src={banner} alt="banner" />
                 </div>
-                <div className="flex justify-start items-center py-3">
+                <div className="flex justify-start flex-wrap items-center py-3 md:text-sm text-xs">
                     Home
                     <svg
                         class="w-5 h-auto fill-current mx-2 text-blue-600"
@@ -113,14 +113,14 @@ function Home() {
                         <path d="M0 0h24v24H0V0z" fill="none" />
                         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z" />
                     </svg>
-                    MSI WS Series
+                    <span className="text-gray-400">MSI WS Series</span>
                 </div>
                 <div>
                     <h2 className="font-[800] text-2xl">MSI PS Series (20)</h2>
                 </div>
                 <div className="flex justify-normal gap-2 mb-16">
                     {/* Filter */}
-                    <div className="w-1/5">
+                    <div className="w-1/5 md:block hidden">
                         <div className="flex justify-center items-center">
                             <div className="w-full flex justify-center items-center h-10">
                                 <MdOutlineArrowBackIosNew size={10} />
@@ -178,35 +178,45 @@ function Home() {
                     {/* product filter */}
                     <div className="w-full flex items-center flex-col">
                         <div className="flex w-full justify-between items-center">
-                            <div>
+                            <div className="md:block hidden w-full">
                                 <p className="text-gray-500 text-xs">items 1-35 of 61</p>
                             </div>
-                            <div className="flex justify-evenly gap-3 text-sm">
+                            <div className="flex justify-evenly md:justify-end w-full gap-3 text-sm">
+                                <FilterSideBar />
                                 <FilterData />
                                 <FilterPage />
 
-                                <div className="flex justify-center items-center gap-3">
-                                    <IoAppsSharp size={30} />
-                                    <img src={upwind} className="h-6 w-6" alt="UpWind" />
+                                <div className="md:block hidden">
+                                    <div className="flex justify-center items-center gap-3">
+                                        <IoAppsSharp size={30} />
+                                        <img src={upwind} className="h-6 w-6" alt="UpWind" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-start w-full items-center text-sm gap-3">
-                            <div className="border border-solid border-gray-400 px-2 py-2">
-                                <div className="text-gray-500 flex justify-center items-center gap-2">
-                                    <span className="font-bold text-black">CUSTOM PCS</span> (24)
-                                    <img src={XPhoto} alt="Xpic" />
-                                </div>
+                        <div className="md:hidden w-full block">
+                            <div className="w-full flex justify-start">
+                                <p className="text-gray-500 text-xs">items 1-35 of 61</p>
                             </div>
-                            <div className="border border-solid border-gray-400 px-2 py-2">
-                                <div className="text-gray-500 flex justify-center items-center gap-2">
-                                    <span className="font-bold text-black">HP/COMPAQ PCS</span> (24)
-                                    <img src={XPhoto} alt="Xpic" />
+                        </div>
+                        <div className="hidden md:block w-full text-sm gap-3">
+                            <div className="flex justify-start w-full items-center">
+                                <div className="border border-solid border-gray-400 px-2 py-2">
+                                    <div className="text-gray-500 flex justify-center items-center gap-2">
+                                        <span className="font-bold text-black">CUSTOM PCS</span> (24)
+                                        <img src={XPhoto} alt="Xpic" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="border border-solid border-gray-400 px-2 py-2">
-                                <div className="text-gray-500 flex justify-center items-center gap-2">
-                                    <span className="font-bold text-black">Clear All</span>
+                                <div className="border border-solid border-gray-400 px-2 py-2">
+                                    <div className="text-gray-500 flex justify-center items-center gap-2">
+                                        <span className="font-bold text-black">HP/COMPAQ PCS</span> (24)
+                                        <img src={XPhoto} alt="Xpic" />
+                                    </div>
+                                </div>
+                                <div className="border border-solid border-gray-400 px-2 py-2">
+                                    <div className="text-gray-500 flex justify-center items-center gap-2">
+                                        <span className="font-bold text-black">Clear All</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +229,7 @@ function Home() {
                             <Pagination />
                         </div>
                         <div className="flex flex-col justify-center w-full mt-8">
-                            <div className="bg-gradient-to-b from-transparent to-white opacity-30 px-3 text-gray-500 text-sm">
+                            <div className="bg-gradient-to-b from-transparent to-white opacity-50 px-3 text-gray-500 text-sm">
                                 MSI has unveiled the Prestige Series line of business-class and gaming notebooks. Tuned for
                                 color accuracy, the Prestige Series also leverages True Color Technology, which allows users
                                 to adjust the display profile to best fit their computing needs.

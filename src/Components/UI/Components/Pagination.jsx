@@ -2,7 +2,7 @@ import React from "react";
 
 function Pagination() {
     return (
-        <div ariaLabel="Pagination" className="flex justify-center items-center text-gray-600 mt-8 lg:mt-0">
+        <div ariaLabel="Pagination" className="flex justify-center items-center  text-gray-600 mt-8 lg:mt-0">
             <a className="p-2 mr-4 rounded-full border border-gray-500 hover:bg-blue-gray-200 hover:text-black bg-transparent">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

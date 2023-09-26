@@ -8,7 +8,7 @@ export function FilterData() {
     const filterData = ["Position", "Date", "Rating", "Popular"];
 
     return (
-        <div className="w-fit font-medium max-h-fit relative">
+        <div className="w-full md:w-fit font-medium max-h-fit relative">
             <div
                 onClick={() => setOpen1(!open1)}
                 className="bg-white w-full border-2 border-gray-400 p-2 font-bold flex items-center justify-center rounded text-black"
@@ -38,13 +38,22 @@ export function FilterData() {
         </div>
     );
 }
+export function FilterSideBar() {
+    return (
+        <div className="w-full font-medium max-h-fit relative md:hidden block">
+            <div className="bg-white w-full border-2 border-gray-400 p-2 font-bold flex items-center justify-center rounded text-black">
+                <span className="text-balck text-center">Filter</span>
+            </div>
+        </div>
+    );
+}
 export function FilterPage() {
     const [open, setOpen] = useState(false);
     const [selectNum, setSelectNum] = useState("20 per page");
     const filterPage = ["20 per page", "30 per page", "40 per page", "50 per page"];
 
     return (
-        <div className="w-fit font-medium max-h-fit relative">
+        <div className="w-fit font-medium max-h-fit relative md:block hidden">
             <div
                 onClick={() => setOpen(!open)}
                 className="bg-white border-2 border-gray-400 w-full font-bold p-2 flex items-center justify-center rounded text-black"

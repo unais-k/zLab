@@ -1,0 +1,60 @@
+export const dataAccord = [
+    {
+        heading: "Information",
+        list: [
+            "About Us",
+            "About Zip",
+            "Privacy Policy",
+            "search",
+            "Terms",
+            "Orders and Returns",
+            "Contact Us",
+            "Advanced Search",
+            "Newsletter Subscription",
+        ],
+    },
+    {
+        heading: "PC Parts",
+        list: [
+            "CPUS",
+            "Add On Cards",
+            "Hard Drives(Internal)",
+            "Graphic Cards",
+            "Keyboards / Mice",
+            "Cases / Power Supplies / Cooling",
+            "RAM (Memory)",
+            "Software",
+            "Speakers / Headsets",
+            "Motherboards",
+        ],
+    },
+    {
+        heading: "Desktop PCs",
+        list: ["Custom PCs", "Servers", "MSI All-In-One PCs", "HP/Compaq PCs", "ASUS PCs", "Tecs PCs"],
+    },
+    {
+        heading: "Laptops",
+        list: [
+            "Everyday Use Notebooks",
+            "MSI Workstation Series",
+            "MSI Prestige Series",
+            "Tablets and Pads",
+            "Notebooks",
+            "Infinity Gaming Notebooks",
+        ],
+    },
+    {
+        heading: "Address",
+        list: [
+            "Address: 1234 Street Address City Address, 1234",
+            "Phones: (00) 1234 5678",
+            "We are open: Monday-Thursday: 9.00 AM - 5.30 PM",
+            "Friday: 9.00AM - 6.00 PM",
+            "Saturday: 11.00AM -5.00 PM",
+            "Email: shop@email.com",
+            "Contact Us",
+            "Advanced Search",
+            "Newsletter Subscription",
+        ],
+    },
+];
